@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroEvolution Flappy Bird</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid-pattern"></div>
+  <div class="container">
+    <header>
+      <h1>NeuroEvolution Flappy Bird</h1>
+      <div class="subtitle">AI SIMULATION USING NEAT</div>
+    </header>
+    
+    <main>
+      <div class="game-container glass-panel" id="game-container">
+        <!-- Game simulation will go here (you'll implement this) -->
+        <!-- <div class="placeholder-text">SIMULATION AREA</div> -->
+      </div>
+      
+      <div class="controls-panel">
+        <div class="info-section">
+          <div class="info-card glass-panel">
+            <h3>Generation</h3>
+            <div class="info-value" id="generation">1</div>
+          </div>
+          <div class="info-card glass-panel">
+            <h3>Best Score</h3>
+            <div class="info-value" id="best-score">0</div>
+          </div>
+          <div class="info-card glass-panel">
+            <h3>Birds Alive</h3>
+            <div class="info-value" id="birds-alive">0</div>
+          </div>
+        </div>
+        
+        <div class="control-section glass-panel">
+          <div class="control-item">
+            <label for="population-size">Population Size<span class="span-warning"> may cause performance issues</span></label>
+            <div class="slider-container">
+              <input type="range" id="population-size" min="10" max="500" value="100" class="slider">
+              <div class="slider-value" id="population-size-value">100</div>
+            </div>
+          </div>
+          
+          <div class="control-item">
+            <label for="simulation-speed">Simulation Speed</label>
+            <div class="slider-container">
+              <input type="range" id="simulation-speed" min="1" max="20" value="1" class="slider">
+              <div class="slider-value" id="simulation-speed-value">1x</div>
+            </div>
+          </div>
+          
+          <div class="buttons">
+            <button id="start-btn" class="btn">Start</button>
+            <button id="reset-btn" class="btn btn-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>NEURAL NETWORK FLAPPY BIRD • @ PRABIN ACHARYA</p>
+      <a class="github-button">
+        Github Repo
+      </a>
+    </footer>
+  </div>
+  
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
